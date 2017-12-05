@@ -1,0 +1,29 @@
+{
+  "name": "qiaweicom/rongcloud",
+  "description": "Rong Cloud laravel 5 composer",
+  "type": "library",
+  "keywords": ["L5", "Laravel 5", "Laravel", "RongCloud", "RongCloud Server SDK"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "DevKang",
+      "email": "cn.devkang@gmail.com"
+    }
+  ],
+  "require": {
+    "laravel/framework": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "QiaWeiCom\\RongCloud\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "QiaWeiCom\\RongCloud\\Providers\\RongCloudServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
