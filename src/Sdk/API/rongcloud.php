@@ -16,7 +16,7 @@ include 'methods/Group.php';
 include 'methods/Chatroom.php';
 include 'methods/Push.php';
 include 'methods/SMS.php';
-    
+include 'methods/ReturnTransformer.php';
 class RongCloud
 {
     /**

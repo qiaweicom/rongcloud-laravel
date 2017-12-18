@@ -29,10 +29,10 @@ class SMS{
     		$ret = $this->SendRequest->curl('/getImgCode.json',$params,'urlencoded','sms','GET');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -70,10 +70,10 @@ class SMS{
     		$ret = $this->SendRequest->curl('/sendCode.json',$params,'urlencoded','sms','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -102,10 +102,10 @@ class SMS{
     		$ret = $this->SendRequest->curl('/verifyCode.json',$params,'urlencoded','sms','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

@@ -27,10 +27,10 @@ class Push{
     		$ret = $this->SendRequest->curl('/user/tag/set.json',$params,'json','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -52,10 +52,10 @@ class Push{
     		$ret = $this->SendRequest->curl('/push.json',$params,'json','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

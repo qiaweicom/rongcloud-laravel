@@ -39,10 +39,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/create.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -73,10 +73,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/sync.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -105,10 +105,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/refresh.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -142,10 +142,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/join.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -169,10 +169,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/user/query.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -201,10 +201,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/quit.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -238,10 +238,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/user/gag/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -265,10 +265,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/user/gag/list.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -297,10 +297,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/user/gag/rollback.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -329,10 +329,10 @@ class Group{
     		$ret = $this->SendRequest->curl('/group/dismiss.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

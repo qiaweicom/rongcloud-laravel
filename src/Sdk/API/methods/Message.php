@@ -57,10 +57,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/private/publish.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -82,10 +82,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/private/publish_template.json',$params,'json','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -131,10 +131,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/system/publish.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -156,10 +156,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/system/publish_template.json',$params,'json','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -207,10 +207,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/group/publish.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -258,10 +258,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/discussion/publish.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -299,10 +299,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/chatroom/publish.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -341,10 +341,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/broadcast.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -368,10 +368,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/history.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -395,10 +395,10 @@ class Message{
     		$ret = $this->SendRequest->curl('/message/history/delete.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

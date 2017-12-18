@@ -29,10 +29,10 @@ class Wordfilter{
     		$ret = $this->SendRequest->curl('/wordfilter/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -51,10 +51,10 @@ class Wordfilter{
     		$ret = $this->SendRequest->curl('/wordfilter/list.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -78,10 +78,10 @@ class Wordfilter{
     		$ret = $this->SendRequest->curl('/wordfilter/delete.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

@@ -35,14 +35,12 @@ class User{
     		'name' => $name,
     		'portraitUri' => $portraitUri
     		);
-    		
     		$ret = $this->SendRequest->curl('/user/getToken.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
-    		
+    		return ReturnTransformer::result($ret);
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -70,10 +68,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/refresh.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -97,10 +95,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/checkOnline.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -129,10 +127,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/block.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -156,10 +154,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/unblock.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -178,10 +176,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/block/query.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -210,10 +208,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/blacklist/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -237,10 +235,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/blacklist/query.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -269,10 +267,10 @@ class User{
     		$ret = $this->SendRequest->curl('/user/blacklist/remove.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     

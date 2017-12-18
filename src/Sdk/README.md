@@ -10,7 +10,34 @@ Rong Cloud Server SDK in PHP.
 - 官方文档(http://www.rongcloud.cn/docs/server.html)
 
 # 使用教程
-* 请参考 example.php 上面提供了所有的 API 接口的调用用例。
+### example 
+
+#### get user token
+```php
+    public function getToken()
+    {
+        $rongCouldAppKey = config('rong_cloud.appKey');
+        $rongCouldAppSecret = config('rong_cloud.appSecret');
+        $RongCloud = new RongCloud($rongCouldAppKey, $rongCouldAppSecret);
+
+        echo ("\n***************** user **************\n");
+        // 获取 Token 方法
+        $result = $RongCloud->user()->getToken('userId1', 'username', 'http://www.rongcloud.cn/images/logo.png');
+        echo "getToken    ";
+        if ($result['code'] == 0) {
+            return $result['result'];
+        }
+        if ($result['code'] == 1) {
+            return $result['message'];
+        }
+
+        echo "\n";
+    }
+
+```
+
+
+* 更多示例请参考 example.php 上面提供了所有的 API 接口的调用用例。
 
 ## 高级API接口
 ### User

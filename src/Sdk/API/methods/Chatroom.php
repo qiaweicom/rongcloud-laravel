@@ -31,10 +31,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/create.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -63,10 +63,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/join.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -90,10 +90,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/query.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -127,10 +127,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/query.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -154,10 +154,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/message/stopDistribution.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -181,10 +181,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/message/resumeDistribution.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -218,10 +218,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/gag/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -245,10 +245,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/gag/list.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -277,10 +277,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/gag/rollback.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -314,10 +314,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/block/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -341,10 +341,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/block/list.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -373,10 +373,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/block/rollback.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -400,10 +400,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/message/priority/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -427,10 +427,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/destroy.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
@@ -459,10 +459,10 @@ class Chatroom{
     		$ret = $this->SendRequest->curl('/chatroom/user/whitelist/add.json',$params,'urlencoded','im','POST');
     		if(empty($ret))
     			throw new Exception('bad request');
-    		return $ret;
+    		return ReturnTransformer::result($ret);
     		
     	}catch (Exception $e) {
-    		print_r($e->getMessage());
+    		return ReturnTransformer::exception($e);
     	}
    }
     
